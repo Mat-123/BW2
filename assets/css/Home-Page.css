@@ -67,6 +67,11 @@
 
 body {
   font-family: "Circular";
+  background-color: #171717;
+}
+
+.direction {
+  background-color: #131313;
 }
 
 .btnPlay {
@@ -79,4 +84,20 @@ body {
 
 .btnSalve:hover {
   box-shadow: 0 0 8px white;
+}
+
+.section1 {
+  background-image: linear-gradient(top right, #ffffff 0%, #aacfef 100%);
+}
+
+.section2 {
+  background-color: #2c2c2c;
+}
+
+.section3 {
+  background-color: #161616;
+}
+
+.btnNascondi {
+  background-color: #222222;
 }
