@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link rel="stylesheet" href="./assets/css/artist-page.css" />
   </head>
-  <body>
+  <body class="font-circular">
     <div class="d-flex">
       <div class="side-bar bg-primary w-25 vh-100">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur omnis non, doloremque a repellendus quam
@@ -22,85 +22,95 @@
       </div>
       <div class="container-fluid px-0">
         <div class="d-flex flex-column">
-          <div class="superior d-flex flex-column bg-img justify-content-between">
+          <div class="superior d-flex flex-column bg-img justify-content-between vh-40 position-relative">
             <div class="d-flex ms-3 mt-2">
-              <i class="bi bi-chevron-left text-white bg-dark rounded-circle me-3"></i>
-              <i class="bi bi-chevron-right text-white bg-dark rounded-circle"></i>
+              <i class="bi bi-chevron-left text-secondary bg-black rounded-circle me-3 arrow-icon"></i>
+              <i class="bi bi-chevron-right text-secondary bg-black rounded-circle arrow-icon"></i>
             </div>
             <div class="d-flex flex-column">
-              <div class="d-flex ms-3 pt-5">
-                <i class="bi bi-patch-check-fill text-primary"></i>
-                <p class="text-white">Artista Verificato</p>
+              <div class="d-flex ms-3 pt-5 align-items-baseline">
+                <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                <p class="text-white fs-7">Artista Verificato</p>
               </div>
-              <h1 class="text-white ms-3">Yellowcard</h1>
-              <h3 class="text-white ms-3 fs-5">3.433.158 ascoltatori mensili</h3>
+              <h1 class="text-white ms-3 style-title">Yellowcard</h1>
+              <h3 class="text-white ms-3 fs-7">3.433.158 ascoltatori mensili</h3>
+            </div>
+            <div
+              class="d-flex align-items-center position-absolute top-0 end-0 mt-2 me-2 bg-black rounded-pill max-content w-25"
+            >
+              <img src="./assets/imgs/search/image-1.jpeg" alt="img" class="w-25 rounded-circle me-1" />
+              <h5 class="text-white fs-7 me-1 fw-bold">Nidia Nautilus ...</h5>
+              <i class="bi bi-caret-down-fill text-white"></i>
             </div>
           </div>
-          <div class="inferior d-flex flex-column bg-gradient">
-            <div class="d-flex align-items-center ms-3 mt-2">
+          <div class="inferior d-flex flex-column bg-gradient vh-60">
+            <div class="d-flex align-items-center ms-3 mt-2 mb-2">
               <i class="bi bi-play-circle-fill text-success fs-1 me-3"></i>
-              <button class="btn btn-outline-secondary text-white me-3">FOLLOWING</button>
+              <button class="btn btn-outline-secondary border-white text-white me-3 fs-7 py-1">FOLLOWING</button>
               <i class="bi bi-three-dots text-white"></i>
             </div>
             <div class="d-flex ms-3">
               <div class="d-flex flex-column">
-                <h3 class="text-white">Popolari</h3>
+                <h3 class="text-white fs-6 mb-4">Popolari</h3>
                 <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
-                  <div class="d-flex">
-                    <span class="text-secondary me-2">1</span>
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">1</span>
                     <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
-                    <h4 class="text-white fs-5 me-3">Ocean Avenue</h4>
+                    <h4 class="text-white fs-6 me-3">Ocean Avenue</h4>
                   </div>
-                  <p class="text-secondary mb-1 me-3">276.616.912</p>
-                  <p class="text-secondary mb-1">3:18</p>
+                  <p class="text-secondary mb-1 me-3 fs-7">276.616.912</p>
+                  <p class="text-secondary mb-1 fs-7">3:18</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
-                  <div class="d-flex">
-                    <span class="text-secondary me-2">2</span>
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">2</span>
                     <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
-                    <h4 class="text-white fs-5 me-3">Only One</h4>
+                    <h4 class="text-white fs-6 me-3">Only One</h4>
                   </div>
-                  <p class="text-secondary mb-1 me-3">98.870.248</p>
-                  <p class="text-secondary mb-1">4:17</p>
+                  <p class="text-secondary mb-1 me-3 fs-7">98.870.248</p>
+                  <p class="text-secondary mb-1 fs-7">4:17</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
-                  <div class="d-flex">
-                    <span class="text-secondary me-2">3</span>
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">3</span>
                     <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
-                    <h4 class="text-white fs-5 me-3">Broathing</h4>
+                    <h4 class="text-white fs-6 me-3">Broathing</h4>
                   </div>
-                  <p class="text-secondary mb-1 me-3">52.308.097</p>
-                  <p class="text-secondary mb-1">3:31</p>
+                  <p class="text-secondary mb-1 me-3 fs-7">52.308.097</p>
+                  <p class="text-secondary mb-1 fs-7">3:31</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
-                  <div class="d-flex">
-                    <span class="text-secondary me-2">4</span>
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">4</span>
                     <img src="./assets/imgs/search/image-7.jpg" alt="img" class="w-10 me-2" />
-                    <h4 class="text-white fs-5 me-3">Lights And Sounds</h4>
+                    <h4 class="text-white fs-6 me-3">Lights And Sounds</h4>
                   </div>
-                  <p class="text-secondary mb-1 me-3">48.270.573</p>
-                  <p class="text-secondary mb-1">3:28</p>
+                  <p class="text-secondary mb-1 me-3 fs-7">48.270.573</p>
+                  <p class="text-secondary mb-1 fs-7">3:28</p>
                 </div>
                 <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
-                  <div class="d-flex">
-                    <span class="text-secondary me-2">5</span>
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">5</span>
                     <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
-                    <h4 class="text-white fs-5 me-3">Way Away</h4>
+                    <h4 class="text-white fs-6 me-3">Way Away</h4>
                   </div>
-                  <p class="text-secondary mb-1 me-3">43.816.679</p>
-                  <p class="text-secondary mb-1">3:22</p>
+                  <p class="text-secondary mb-1 me-3 fs-7">43.816.679</p>
+                  <p class="text-secondary mb-1 fs-7">3:22</p>
                 </div>
-                <h5 class="text-white fs-5">VISUALIZZA ALTRO</h5>
+                <h5 class="text-white fs-7 mt-3">VISUALIZZA ALTRO</h5>
               </div>
               <div class="d-flex flex-column ms-4">
-                <h3 class="text-white">BRANI CHE TI PIACCIONO</h3>
+                <h3 class="text-white fs-6 mb-4">Brani che ti piacciono</h3>
                 <div class="d-flex align-items-center">
-                  <div class="w-25">
-                    <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-75 rounded-circle" />
+                  <div class="w-25 position-relative me-2">
+                    <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+                    <i
+                      class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-1 rounded-circle bg-success text-white w-25"
+                    ></i>
                   </div>
                   <div class="d-flex flex-column">
-                    <h5 class="text-white">Hai messo Mi piace a 11 brani</h5>
-                    <p class="text-white">Di Yellowcard</p>
+                    <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
+                    <p class="text-secondary fs-8">Di Yellowcard</p>
                   </div>
                 </div>
               </div>

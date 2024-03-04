@@ -1,11 +1,58 @@
 .bg-img {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEVR-uoEQGvzMgcjvQg2kTp7UpmRq_HA9Og&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-gradient {
   background-image: linear-gradient(to bottom, #1e1e1e, #121212) !important;
+  /* background-image: linear-gradient(to bottom, #272626, #080808) !important; */
 }
 
 .w-10 {
   width: 10%;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-60 {
+  height: 60vh;
+}
+
+.vh-70 {
+  height: 70vh;
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+.fs-8 {
+  font-size: 0.6rem;
+}
+
+.style-title {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.max-content {
+  width: fit-content;
+  margin: auto;
+}
+
+.arrow-icon:hover {
+  color: white !important;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.font-circular {
+  font-family: "Circular", sans-serif;
 }
