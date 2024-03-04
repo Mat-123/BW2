@@ -1,0 +1,11 @@
+.bg-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEVR-uoEQGvzMgcjvQg2kTp7UpmRq_HA9Og&usqp=CAU);
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #1e1e1e, #121212) !important;
+}
+
+.w-10 {
+  width: 10%;
+}
