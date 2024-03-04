@@ -68,3 +68,15 @@
 body {
   font-family: "Circular";
 }
+
+.btnPlay {
+  background-color: #1ed760;
+}
+.btnPlay:hover {
+  background: #1ed760;
+  box-shadow: 0 0 8px white;
+}
+
+.btnSalve:hover {
+  box-shadow: 0 0 8px white;
+}
