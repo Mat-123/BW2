@@ -74,6 +74,10 @@ body {
   background-color: #131313;
 }
 
+.direction:hover {
+  background-color: black;
+}
+
 .btnPlay {
   background-color: #1ed760;
 }
@@ -87,7 +91,7 @@ body {
 }
 
 .section1 {
-  background-image: linear-gradient(top right, #ffffff 0%, #aacfef 100%);
+  background-image: linear-gradient(16deg, black, #ffffff1c);
 }
 
 .section2 {
@@ -96,8 +100,37 @@ body {
 
 .section3 {
   background-color: #161616;
+  width: 8rem;
 }
 
 .btnNascondi {
   background-color: #222222;
+}
+
+.card:hover {
+}
+
+.size-footer {
+  font-size: 13px;
+  text-decoration: none;
+}
+.size-footer:hover {
+  text-decoration: underline;
+}
+
+.footer-position {
+  width: 70rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.size-piccolo {
+  font-size: 10px;
+}
+
+.titolo-card {
+  font-size: 15px;
 }
