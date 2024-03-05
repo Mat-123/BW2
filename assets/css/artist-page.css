@@ -1,0 +1,175 @@
+.bg-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEVR-uoEQGvzMgcjvQg2kTp7UpmRq_HA9Og&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #1e1e1e, #121212) !important;
+  /* background-image: linear-gradient(to bottom, #272626, #080808) !important; */
+}
+
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-50 {
+  height: 40vh;
+}
+
+.vh-60 {
+  height: 60vh;
+}
+
+.vh-70 {
+  height: 70vh;
+}
+
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+.fs-8 {
+  font-size: 0.6rem;
+}
+
+.style-title {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.max-content {
+  width: fit-content;
+  margin: auto;
+}
+
+.arrow-icon:hover {
+  color: white !important;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.font-circular {
+  font-family: "Circular", sans-serif;
+}
+
+.bi-arrow-left-circle-fill::before {
+  margin-block-start: 20px;
+}
+
+.h-second-section-central {
+  height: calc(60vh - 76px);
+}
+
+/* css sidebar */
+.mainContainer {
+  height: 100%;
+}
+
+.mainContainerGap {
+  gap: 8px;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "nav main sidebar"
+    "aside main sidebar";
+}
+
+.b-radius-8px {
+  border-radius: 8px;
+  background-color: #121212;
+}
+
+.text-grey {
+  color: #b3b3b3;
+}
+
+.bg-bottom-player {
+  background-color: #181818;
+}
+
+.a-side {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.grey-border {
+  border-color: #b3b3b3 !important;
+}
+
+.a-side:hover {
+  color: white;
+}
+
+.playlistColumn {
+  min-height: 100vh;
+}
+
+.font-circular {
+  font-family: Circular, sans-serif;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fs-08 {
+  font-size: 0.8;
+}
+
+.fs-06 {
+  font-size: 0.6rem;
+}
+
+.fs-05 {
+  font-size: 0.5rem;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.volume-bar-width {
+  width: 100px;
+}
+
+.slider {
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.sliderMain {
+  width: 300px;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.height-sidebar {
+  height: calc(100vh - 76px);
+}

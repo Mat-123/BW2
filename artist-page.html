@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artist Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./assets/css/circular-font.css" />
+    <link rel="stylesheet" href="./assets/css/artist-page.css" />
+  </head>
+  <body class="font-circular">
+    <!--sezione generale-->
+    <div class="container-fluid">
+      <!--contenitore per le varie macro sezioni-->
+      <div class="row">
+        <!--sezione colonna SX-->
+        <div class="col-3 bg-black height-sidebar">
+          <div class="row-cols-1 text-grey">
+            <div class="col">
+              <div class="mx-3 my-4 d-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                  />
+                </svg>
+              </div>
+              <div class="mx-3 mb-5 d-block">
+                <div class="mb-3">
+                  <a href="./index.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-house-door-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                      />
+                    </svg>
+                    <span>Home</span>
+                  </a>
+                </div>
+                <div class="mb-3">
+                  <a href="./search.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-search me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                    <span>Cerca</span>
+                  </a>
+                </div>
+                <div class="">
+                  <a href="./index.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-music-note-list me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2" />
+                      <path fill-rule="evenodd" d="M12 3v10h-1V3z" />
+                      <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"
+                      />
+                    </svg>
+                    <span>La tua libreria</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mx-3 mb-2 d-block border-bottom grey-border">
+                <div class="mb-3">
+                  <a href="./index.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-house-door-fill me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"
+                      />
+                    </svg>
+                    <span>Crea Playlist</span>
+                  </a>
+                </div>
+                <div class="mb-3">
+                  <a href="./search.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-search me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                    <span>Brani che ti piacciono</span></a
+                  >
+                </div>
+                <div class="mb-2">
+                  <a href="./index.html" class="a-side d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-music-note-list me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2" />
+                      <path fill-rule="evenodd" d="M12 3v10h-1V3z" />
+                      <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"
+                      />
+                    </svg>
+                    <span>I tuoi episodi</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mx-3">Playlists</div>
+            </div>
+          </div>
+        </div>
+
+        <!--sezione parte centrale-->
+        <div class="col-7 px-0">
+          <div class="container-fluid px-0">
+            <div class="d-flex flex-column">
+              <div class="superior d-flex flex-column bg-img justify-content-between vh-40 position-relative">
+                <div class="d-flex ms-3 mt-2">
+                  <i class="bi bi-chevron-left text-secondary bg-black rounded-circle me-3 arrow-icon"></i>
+                  <i class="bi bi-chevron-right text-secondary bg-black rounded-circle arrow-icon"></i>
+                </div>
+                <div class="d-flex flex-column">
+                  <div class="d-flex ms-3 pt-5 align-items-baseline">
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    <p class="text-white fs-7">Artista Verificato</p>
+                  </div>
+                  <h1 class="text-white ms-3 style-title">Yellowcard</h1>
+                  <h3 class="text-white ms-3 fs-7">3.433.158 ascoltatori mensili</h3>
+                </div>
+                <div
+                  class="d-flex align-items-center position-absolute top-0 end-0 mt-2 me-2 bg-black rounded-pill max-content w-25"
+                >
+                  <img src="./assets/imgs/search/image-1.jpeg" alt="img" class="w-25 rounded-circle me-1" />
+                  <h5 class="text-white fs-7 me-1 fw-bold">Nidia Nautilus ...</h5>
+                  <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+              </div>
+              <div class="inferior d-flex flex-column bg-gradient h-second-section-central">
+                <div class="d-flex align-items-center ms-3 mt-2 mb-2">
+                  <i class="bi bi-play-circle-fill text-success fs-1 me-3"></i>
+                  <button class="btn btn-outline-secondary border-white text-white me-3 fs-7 py-1">FOLLOWING</button>
+                  <i class="bi bi-three-dots text-white"></i>
+                </div>
+                <div class="d-flex ms-3">
+                  <div class="d-flex flex-column">
+                    <h3 class="text-white fs-6 mb-3">Popolari</h3>
+                    <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                      <div class="d-flex align-items-center">
+                        <span class="text-secondary me-2 fs-7">1</span>
+                        <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                        <h4 class="text-white fs-6 me-3">Ocean Avenue</h4>
+                      </div>
+                      <p class="text-secondary mb-1 me-3 fs-7">276.616.912</p>
+                      <p class="text-secondary mb-1 fs-7">3:18</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                      <div class="d-flex align-items-center">
+                        <span class="text-secondary me-2 fs-7">2</span>
+                        <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                        <h4 class="text-white fs-6 me-3">Only One</h4>
+                      </div>
+                      <p class="text-secondary mb-1 me-3 fs-7">98.870.248</p>
+                      <p class="text-secondary mb-1 fs-7">4:17</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                      <div class="d-flex align-items-center">
+                        <span class="text-secondary me-2 fs-7">3</span>
+                        <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                        <h4 class="text-white fs-6 me-3">Broathing</h4>
+                      </div>
+                      <p class="text-secondary mb-1 me-3 fs-7">52.308.097</p>
+                      <p class="text-secondary mb-1 fs-7">3:31</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                      <div class="d-flex align-items-center">
+                        <span class="text-secondary me-2 fs-7">4</span>
+                        <img src="./assets/imgs/search/image-7.jpg" alt="img" class="w-10 me-2" />
+                        <h4 class="text-white fs-6 me-3">Lights And Sounds</h4>
+                      </div>
+                      <p class="text-secondary mb-1 me-3 fs-7">48.270.573</p>
+                      <p class="text-secondary mb-1 fs-7">3:28</p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                      <div class="d-flex align-items-center">
+                        <span class="text-secondary me-2 fs-7">5</span>
+                        <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                        <h4 class="text-white fs-6 me-3">Way Away</h4>
+                      </div>
+                      <p class="text-secondary mb-1 me-3 fs-7">43.816.679</p>
+                      <p class="text-secondary mb-1 fs-7">3:22</p>
+                    </div>
+                    <h5 class="text-white fs-7 mt-2">VISUALIZZA ALTRO</h5>
+                  </div>
+                  <div class="d-flex flex-column ms-4">
+                    <h3 class="text-white fs-6 mb-4">Brani che ti piacciono</h3>
+                    <div class="d-flex align-items-center">
+                      <div class="w-25 position-relative me-2">
+                        <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+                        <i
+                          class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-1 rounded-circle bg-success text-white w-25"
+                        ></i>
+                      </div>
+                      <div class="d-flex flex-column">
+                        <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
+                        <p class="text-secondary fs-8">Di Yellowcard</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--senzione colonna DX-->
+        <div class="col-2 bg-black text-grey height-sidebar">
+          <div class="my-4 d-flex justify-content-between">
+            <div class="">Attivita' amici</div>
+            <div>
+              <a href="#" class="a-side">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-plus-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="a-side">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex my-3">
+            <a href="#"
+              ><img
+                src="./assets/imgs/search/image-45.png"
+                alt=""
+                style="height: 35px; width: 35px"
+                class="rounded-circle me-2"
+            /></a>
+            <div class="d-flex flex-column">
+              <p class="fw-500 fs-06 m-0 d-block">Charlie Hookman</p>
+              <span class="d-inline fs-05 m-0">La cucaracha &#x2022; Gianni Morandi</span>
+              <span class="fw-500 fs-05 m-0 d-block">Album</span>
+            </div>
+            <span class="fs-05 ms-auto">4 ore</span>
+          </div>
+          <div class="d-flex my-3">
+            <a href="#"
+              ><img
+                src="./assets/imgs/search/image-45.png"
+                alt=""
+                style="height: 35px; width: 35px"
+                class="rounded-circle me-2"
+            /></a>
+            <div class="d-flex flex-column">
+              <p class="fw-500 fs-06 m-0 d-block">Charlie Hookman</p>
+              <span class="d-inline fs-05 m-0">La cucaracha &#x2022; Gianni Morandi</span>
+              <span class="fw-500 fs-05 m-0 d-block">Album</span>
+            </div>
+            <span class="fs-05 ms-auto">4 ore</span>
+          </div>
+          <div class="d-flex my-3">
+            <a href="#"
+              ><img
+                src="./assets/imgs/search/image-45.png"
+                alt=""
+                style="height: 35px; width: 35px"
+                class="rounded-circle me-2"
+            /></a>
+            <div class="d-flex flex-column">
+              <p class="fw-500 fs-06 m-0 d-block">Charlie Hookman</p>
+              <span class="d-inline fs-05 m-0">La cucaracha &#x2022; Gianni Morandi</span>
+              <span class="fw-500 fs-05 m-0 d-block">Album</span>
+            </div>
+            <span class="fs-05 ms-auto">4 ore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--footer player-->
+    <div
+      class="d-flex w-100 bg-bottom-player justify-content-between align-items-center sticky-bottom z-index-2 text-grey"
+    >
+      <div class="d-flex align-items-center my-2 mx-3">
+        <img src="./assets/imgs/main/image-13.jpg" alt="" max-width="60px" height="60px" class="me-3" />
+        <div class="flex-column me-4">
+          <p class="fw-500 m-0 d-block">Charlie Hookman</p>
+          <span class="fs-08 m-0 d-block">Album</span>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-heart"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+          />
+        </svg>
+      </div>
+      <!--Sezione player centrale-->
+      <div class="align-items-center">
+        <!--icone play-->
+        <div class="d-flex justify-content-center align-items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-shuffle me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"
+            />
+            <path
+              d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-left me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-play-circle-fill me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-right me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-repeat"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"
+            />
+          </svg>
+        </div>
+        <!--slider-->
+        <div></div>
+        <div>
+          <span>0:30</span>
+          <input type="range" min="1" max="100" value="50" class="sliderMain" />
+          <span>4:23</span>
+        </div>
+      </div>
+      <!--Sezione player DX-->
+      <div class="align-items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-mic me-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"
+          />
+          <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-card-text me-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+          />
+          <path
+            d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-pc-display me-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-volume-up me-1"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"
+          />
+          <path
+            d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"
+          />
+          <path
+            d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"
+          />
+        </svg>
+
+        <input type="range" min="1" max="100" value="50" class="slider me-3" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrows-angle-expand me-3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- VERSIONE DESKTOP SENZA SIDEBAR -->
+    <!-- 
+            <div class="d-flex">
+              <div class="container-fluid px-0">
+        <div class="d-flex flex-column">
+          <div class="superior d-flex flex-column bg-img justify-content-between vh-40 position-relative">
+            <div class="d-flex ms-3 mt-2">
+              <i class="bi bi-chevron-left text-secondary bg-black rounded-circle me-3 arrow-icon"></i>
+              <i class="bi bi-chevron-right text-secondary bg-black rounded-circle arrow-icon"></i>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex ms-3 pt-5 align-items-baseline">
+                <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                <p class="text-white fs-7">Artista Verificato</p>
+              </div>
+              <h1 class="text-white ms-3 style-title">Yellowcard</h1>
+              <h3 class="text-white ms-3 fs-7">3.433.158 ascoltatori mensili</h3>
+            </div>
+            <div
+              class="d-flex align-items-center position-absolute top-0 end-0 mt-2 me-2 bg-black rounded-pill max-content w-25"
+            >
+              <img src="./assets/imgs/search/image-1.jpeg" alt="img" class="w-25 rounded-circle me-1" />
+              <h5 class="text-white fs-7 me-1 fw-bold">Nidia Nautilus ...</h5>
+              <i class="bi bi-caret-down-fill text-white"></i>
+            </div>
+          </div>
+          <div class="inferior d-flex flex-column bg-gradient vh-60">
+            <div class="d-flex align-items-center ms-3 mt-2 mb-2">
+              <i class="bi bi-play-circle-fill text-success fs-1 me-3"></i>
+              <button class="btn btn-outline-secondary border-white text-white me-3 fs-7 py-1">FOLLOWING</button>
+              <i class="bi bi-three-dots text-white"></i>
+            </div>
+            <div class="d-flex ms-3">
+              <div class="d-flex flex-column">
+                <h3 class="text-white fs-6 mb-4">Popolari</h3>
+                <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">1</span>
+                    <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                    <h4 class="text-white fs-6 me-3">Ocean Avenue</h4>
+                  </div>
+                  <p class="text-secondary mb-1 me-3 fs-7">276.616.912</p>
+                  <p class="text-secondary mb-1 fs-7">3:18</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">2</span>
+                    <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                    <h4 class="text-white fs-6 me-3">Only One</h4>
+                  </div>
+                  <p class="text-secondary mb-1 me-3 fs-7">98.870.248</p>
+                  <p class="text-secondary mb-1 fs-7">4:17</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">3</span>
+                    <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                    <h4 class="text-white fs-6 me-3">Broathing</h4>
+                  </div>
+                  <p class="text-secondary mb-1 me-3 fs-7">52.308.097</p>
+                  <p class="text-secondary mb-1 fs-7">3:31</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">4</span>
+                    <img src="./assets/imgs/search/image-7.jpg" alt="img" class="w-10 me-2" />
+                    <h4 class="text-white fs-6 me-3">Lights And Sounds</h4>
+                  </div>
+                  <p class="text-secondary mb-1 me-3 fs-7">48.270.573</p>
+                  <p class="text-secondary mb-1 fs-7">3:28</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                  <div class="d-flex align-items-center">
+                    <span class="text-secondary me-2 fs-7">5</span>
+                    <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
+                    <h4 class="text-white fs-6 me-3">Way Away</h4>
+                  </div>
+                  <p class="text-secondary mb-1 me-3 fs-7">43.816.679</p>
+                  <p class="text-secondary mb-1 fs-7">3:22</p>
+                </div>
+                <h5 class="text-white fs-7 mt-3">VISUALIZZA ALTRO</h5>
+              </div>
+              <div class="d-flex flex-column ms-4">
+                <h3 class="text-white fs-6 mb-4">Brani che ti piacciono</h3>
+                <div class="d-flex align-items-center">
+                  <div class="w-25 position-relative me-2">
+                    <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+                    <i
+                      class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-1 rounded-circle bg-success text-white w-25"
+                    ></i>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
+                    <p class="text-secondary fs-8">Di Yellowcard</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- MOBILE VERSION SM-MD -->
+
+    <!-- <div class="d-flex flex-column">
+      <header class="bg-img vh-40 position-relative pt-3">
+        <h1 class="text-white ms-3 style-title position-absolute bottom-0">Pinguini Tattici Nucleari</h1>
+        <i class="bi bi-arrow-left fs-1 text-white ms-3 rounded-circle bg-dark p-2"></i>
+      </header>
+      <main class="bg-gradient d-flex flex-column">
+        <section class="d-flex flex-column">
+          <h3 class="text-white ms-3 mt-4 mb-3">3.433.158 ascoltatori mensili</h3>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center ms-3">
+              <button type="button" class="btn text-white border-secondary me-3">Seguiti</button>
+              <i class="bi bi-three-dots-vertical text-white fs-3"></i>
+            </div>
+            <div class="d-flex align-items-center me-3">
+              <i class="bi bi-shuffle text-success fs-2 me-3"></i>
+              <i class="bi bi-play-circle-fill text-success fs-1 me-3"></i>
+            </div>
+          </div>
+        </section>
+        <div class="d-flex align-items-center ms-3 mt-4">
+          <div class="w-15 position-relative me-3">
+            <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+            <i
+              class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-2 rounded-circle bg-success text-white w-25"
+            ></i>
+          </div>
+          <div class="d-flex flex-column">
+            <h5 class="text-white">Brani che ti piacciono</h5>
+            <p class="text-secondary">8 brani di Pinguini Tattici Nucleari</p>
+          </div>
+        </div>
+        <h3 class="text-white ms-3 mt-4 mb-4 fs-2">Popolari</h3>
+        <div class="d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <span class="text-white ms-4 me-3">1</span>
+              <img src="./assets/imgs/main/image-12.jpg" alt="img" class="w-15 me-3" />
+              <div class="d-flex flex-column">
+                <h3 class="text-white mb-0 fw-lighter">Ricordi</h3>
+                <p class="text-secondary mb-0">10.679.376</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-three-dots-vertical text-white fs-3 me-4"></i>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <span class="text-white ms-4 me-3">2</span>
+              <img src="./assets/imgs/main/image-14.jpg" alt="img" class="w-15 me-3" />
+              <div class="d-flex flex-column">
+                <h3 class="text-white mb-0 fw-lighter">Ricordi</h3>
+                <p class="text-secondary mb-0">47.386.376</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-three-dots-vertical text-white fs-3 me-4"></i>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <span class="text-white ms-4 me-3">3</span>
+              <img src="./assets/imgs/main/image-14.jpg" alt="img" class="w-15 me-3" />
+              <div class="d-flex flex-column">
+                <h3 class="text-white mb-0 fw-lighter">Ricordi</h3>
+                <p class="text-secondary mb-0">47.386.376</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-three-dots-vertical text-white fs-3 me-4"></i>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <span class="text-white ms-4 me-3">4</span>
+              <img src="./assets/imgs/main/image-14.jpg" alt="img" class="w-15 me-3" />
+              <div class="d-flex flex-column">
+                <h3 class="text-white mb-0 fw-lighter">Ricordi</h3>
+                <p class="text-secondary mb-0">47.386.376</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-three-dots-vertical text-white fs-3 me-4"></i>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <span class="text-white ms-4 me-3">5</span>
+              <img src="./assets/imgs/main/image-14.jpg" alt="img" class="w-15 me-3" />
+              <div class="d-flex flex-column">
+                <h3 class="text-white mb-0 fw-lighter">Ricordi</h3>
+                <p class="text-secondary mb-0">47.386.376</p>
+              </div>
+            </div>
+            <div>
+              <i class="bi bi-three-dots-vertical text-white fs-3 me-4"></i>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
