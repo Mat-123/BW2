@@ -12,12 +12,19 @@
 .w-10 {
   width: 10%;
 }
+.w-15 {
+  width: 15%;
+}
 
 .vh-30 {
   height: 30vh;
 }
 
 .vh-40 {
+  height: 40vh;
+}
+
+.vh-50 {
   height: 40vh;
 }
 
@@ -56,3 +63,12 @@
 .font-circular {
   font-family: "Circular", sans-serif;
 }
+
+.bi-arrow-left-circle-fill::before {
+  margin-block-start: 20px;
+}
+
+/* .play-style {
+  background-color: black;
+  border-radius: 50%;
+} */
