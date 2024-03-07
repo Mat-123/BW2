@@ -163,25 +163,72 @@
         <div class="col-7 px-0">
           <div class="container-fluid px-0">
             <div class="d-flex flex-column">
-              <div class="superior d-flex flex-column bg-img justify-content-between vh-40 position-relative">
-                <div class="d-flex ms-3 mt-2">
-                  <i class="bi bi-chevron-left text-secondary bg-black rounded-circle me-3 arrow-icon"></i>
-                  <i class="bi bi-chevron-right text-secondary bg-black rounded-circle arrow-icon"></i>
+              <div class="superior d-flex flex-column justify-content-between vh-40 position-relative" id="bg-img">
+                <!--NAVBAR -->
+                <div class="container pt-4">
+                  <div class="row">
+                    <div class="col-6 d-flex">
+                      <a href="#"
+                        ><i
+                          class="bi bi-chevron-left text-white border-0 me-3 direction"
+                          style="border-radius: 50%; padding: 0.3rem 0.4rem; font-size: 1.4rem"
+                        ></i
+                      ></a>
+                      <a href="#"
+                        ><i
+                          class="bi bi-chevron-right text-white border-0 direction"
+                          style="border-radius: 50%; padding: 0.3rem 0.4rem; font-size: 1.4rem"
+                        ></i
+                      ></a>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end align-items-end">
+                      <div class="dropdown">
+                        <a
+                          class="rounded-pill text-white text-decoration-none press"
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          style="
+                            background-color: rgba(0, 0, 0, 0.6);
+                            padding-right: 10px;
+                            padding: 7px;
+                            border-radius: 50%;
+                          "
+                        >
+                          <img
+                            src="/assets/imgs/main/image-2.jpg"
+                            alt="User foto"
+                            class="rounded-circle me-2"
+                            style="width: 25px; height: 25px; overflow: hidden"
+                          />
+                          <span class="text-white me-2">Lidia Nautilus ...</span>
+                          <i class="bi bi-caret-down-fill text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="background-color: rgba(0, 0, 0, 0.6)">
+                          <li>
+                            <a class="dropdown-item text-white" href="#">User 1</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-white" href="#">User 2</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-white" href="#">User3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!--FINE NAVBAR-->
                 <div class="d-flex flex-column">
                   <div class="d-flex ms-3 pt-5 align-items-baseline">
                     <i class="bi bi-patch-check-fill text-primary me-2"></i>
                     <p class="text-white fs-7">Artista Verificato</p>
                   </div>
-                  <h1 class="text-white ms-3 style-title">Yellowcard</h1>
-                  <h3 class="text-white ms-3 fs-7">3.433.158 ascoltatori mensili</h3>
-                </div>
-                <div
-                  class="d-flex align-items-center position-absolute top-0 end-0 mt-2 me-2 bg-black rounded-pill max-content w-25"
-                >
-                  <img src="./assets/imgs/search/image-1.jpeg" alt="img" class="w-25 rounded-circle me-1" />
-                  <h5 class="text-white fs-7 me-1 fw-bold">Nidia Nautilus ...</h5>
-                  <i class="bi bi-caret-down-fill text-white"></i>
+                  <h1 class="text-white ms-3 style-title" id="artist-name-title"></h1>
+                  <h3 class="text-white ms-3 fs-7" id="fans"></h3>
                 </div>
               </div>
               <div class="inferior d-flex flex-column bg-gradient h-second-section-central">
@@ -251,7 +298,7 @@
                       </div>
                       <div class="d-flex flex-column">
                         <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
-                        <p class="text-secondary fs-8">Di Yellowcard</p>
+                        <p class="text-secondary fs-8" id="artist-name-last"></p>
                       </div>
                     </div>
                   </div>
@@ -734,5 +781,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/artist-page.js"></script>
   </body>
 </html>

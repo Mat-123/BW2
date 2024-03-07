@@ -236,7 +236,7 @@
                 <div class="col-7">
                   <div>
                     <div class="text-white">Album</div>
-                    <h1 class="mb-3 text-white display-3 fw-bold" id="title-album"></h1>
+                    <h1 class="mb-3 text-white display-5 fw-bold" id="title-album"></h1>
                     <div class="d-flex">
                       <img
                         alt="image"
@@ -244,7 +244,7 @@
                         style="width: 25px; height: 25px; overflow: hidden"
                         id="img-artist"
                       />
-                      <p style="margin-left: 0.5rem" class="text-white" id="artist-name"></p>
+                      <p style="margin-left: 0.5rem; cursor: pointer" class="text-white" id="artist-name"></p>
                     </div>
                     <span class="opacity-50 text-white" id="duration"></span>
                   </div>
@@ -358,7 +358,13 @@
               </div>
             </div>
 
-            <a href="#" class="text-decoration-none text-white">
+            <!-- <audio id="audio">
+              <source type="audio/mpeg" id="audio-source" />
+              Il tuo browser non supporta l'elemento audio.
+            </audio> -->
+
+            <div class="container-fluid" id="container-fluid-song"></div>
+            <!-- <a href="#" class="text-decoration-none text-white">
               <div class="container mt-4">
                 <div class="row">
                   <div class="col-7">
@@ -516,7 +522,7 @@
                   <div class="col-2 align-self-center opacity-50">1:11</div>
                 </div>
               </div>
-            </a>
+            </a> -->
           </main>
         </div>
         <!--FINE DEL MAIN-->
@@ -609,13 +615,14 @@
 
     <!--footer player-->
     <div
-      class="d-flex w-100 bg-bottom-player justify-content-between align-items-center sticky-bottom z-index-2 text-grey"
+      class="d-flex w-100 bg-bottom-player justify-content-between align-items-center sticky-bottom z-index-2 text-grey d-none"
+      id="footer-player"
     >
       <div class="d-flex align-items-center my-2 mx-3">
-        <img src="./assets/imgs/main/image-13.jpg" alt="" max-width="60px" height="60px" class="me-3" />
+        <img src="./assets/imgs/main/image-13.jpg" alt="" max-width="60px" height="60px" class="me-3" id="footer-img" />
         <div class="flex-column me-4">
-          <p class="fw-500 m-0 d-block">Charlie Hookman</p>
-          <span class="fs-08 m-0 d-block">Album</span>
+          <p class="fw-500 m-0 d-block" id="footer-title">Charlie Hookman</p>
+          <span class="fs-08 m-0 d-block" id="footer-artist-name">Album</span>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -669,6 +676,7 @@
             fill="currentColor"
             class="bi bi-play-circle-fill me-3"
             viewBox="0 0 16 16"
+            id="footer-play"
           >
             <path
               d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"

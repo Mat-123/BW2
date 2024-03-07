@@ -98,7 +98,8 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
         audio.pause();
       }
     });
-  });
+  })
+  .catch(err => console.log(err));
 
 const randomArtistId = Math.ceil(Math.random() * 95);
 
@@ -156,7 +157,8 @@ const generateCardArtist = artistIndex => {
       card.addEventListener("click", e => {
         window.location.assign(`/artist-page.html?artistId=${artist.id}`);
       });
-    });
+    })
+    .catch(err => console.log(err));
 };
 
 generateCardArtist(randomArtistId);
