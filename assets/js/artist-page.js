@@ -17,7 +17,7 @@ playBtn.style = "cursor: pointer;";
 const footerPauseBtn = document.getElementById("footer-pause");
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
-  .then((response) => {
+  .then(response => {
     console.log(response);
 
     if (response.ok) {
@@ -38,7 +38,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then((artist) => {
+  .then(artist => {
     console.log(artist);
 
     titleArtistName.innerText = artist.name;
@@ -47,10 +47,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
     divBgImg.style = `background-image: url(${artist.picture_big}); background-repeat: no-repeat; background-size: cover; `;
     artistNameLast.innerText = "Di " + artist.name;
   })
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=5`)
-  .then((response) => {
+  .then(response => {
     console.log(response);
 
     if (response.ok) {
@@ -71,7 +71,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then((tracks) => {
+  .then(tracks => {
     const tracksArray = tracks.data;
     console.log(tracksArray);
 
@@ -153,7 +153,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       let isPlaying = false;
       let currentTrack = null;
 
-      card.addEventListener("click", (e) => {
+      card.addEventListener("click", e => {
         footerPlayer.classList.remove("d-none");
 
         if (!isPlaying || currentTrack !== tracksArray[i]) {
@@ -175,7 +175,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
         footerArtistName.innerText = tracksArray[i].artist.name;
       });
 
-      playBtn.addEventListener("click", (e) => {
+      playBtn.addEventListener("click", e => {
         footerPlayer.classList.remove("d-none");
         if (audio.paused) {
           audio.src = tracksArray[0].preview;
@@ -192,7 +192,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
         footerArtistName.innerText = tracksArray[0].artist.name;
       });
 
-      footerPlayBtn.addEventListener("click", (e) => {
+      footerPlayBtn.addEventListener("click", e => {
         footerPlayer.classList.remove("d-none");
         if (audio.paused) {
           audio.play();
@@ -208,7 +208,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
         footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
       });
 
-      footerPauseBtn.addEventListener("click", (e) => {
+      footerPauseBtn.addEventListener("click", e => {
         footerPlayBtn.classList.remove("d-none");
         footerPauseBtn.classList.add("d-none");
         if (audio.played) {
@@ -221,4 +221,4 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       });
     }
   })
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
