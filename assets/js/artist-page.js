@@ -9,11 +9,14 @@ const divContainer = document.getElementById("div-container");
 const footerImg = document.getElementById("footer-img");
 const footerTitle = document.getElementById("footer-title");
 const footerArtistName = document.getElementById("footer-artist-name");
-const footerPlayBtn = document.getElementById("footer-play");
 const footerPlayer = document.getElementById("footer-player");
+const footerPlayBtn = document.getElementById("footer-play");
+footerPlayBtn.style = "cursor: pointer;";
+const playBtn = document.getElementById("play-btn-green");
+playBtn.style = "cursor: pointer;";
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
-  .then((response) => {
+  .then(response => {
     console.log(response);
 
     if (response.ok) {
@@ -34,7 +37,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then((artist) => {
+  .then(artist => {
     console.log(artist);
 
     titleArtistName.innerText = artist.name;
@@ -42,10 +45,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
     divBgImg.style = `background-image: url(${artist.picture_big}); background-repeat: no-repeat; background-size: cover;`;
     artistNameLast.innerText = "Di " + artist.name;
   })
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=5`)
-  .then((response) => {
+  .then(response => {
     console.log(response);
 
     if (response.ok) {
@@ -66,13 +69,16 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then((tracks) => {
+  .then(tracks => {
     const tracksArray = tracks.data;
     console.log(tracksArray);
+
+    const audio = new Audio();
 
     for (let i = 0; i < tracksArray.length; i++) {
       const card = document.createElement("div");
       card.className = "d-flex align-items-center justify-content-between ms-2 mb-2";
+      card.style = "cursor: pointer;";
 
       const divImg = document.createElement("div");
       divImg.className = "d-flex align-items-center";
@@ -104,6 +110,50 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       card.appendChild(rank);
       card.appendChild(duration);
       divContainer.appendChild(card);
+
+      let isPlaying = false;
+      let currentTrack = null;
+
+      card.addEventListener("click", e => {
+        footerPlayer.classList.remove("d-none");
+
+        if (!isPlaying || currentTrack !== tracksArray[i]) {
+          audio.src = tracksArray[i].preview;
+          audio.play();
+          isPlaying = true;
+          currentTrack = tracksArray[i];
+        } else {
+          audio.pause();
+          isPlaying = false;
+        }
+
+        footerImg.src = tracksArray[i].album.cover;
+        footerTitle.innerText = tracksArray[i].title;
+        footerArtistName.innerText = tracksArray[i].artist.name;
+      });
+
+      footerPlayBtn.addEventListener("click", e => {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+
+      // const randomSong = Math.ceil(Math.random() * tracksArray.length);
+
+      playBtn.addEventListener("click", e => {
+        footerPlayer.classList.remove("d-none");
+        if (audio.paused) {
+          audio.src = tracksArray[0].preview;
+          audio.play();
+        } else {
+          audio.pause();
+        }
+        footerImg.src = tracksArray[0].album.cover;
+        footerTitle.innerText = tracksArray[0].title;
+        footerArtistName.innerText = tracksArray[0].artist.name;
+      });
     }
 
     // tracksArray.sort(function (a, b) {
@@ -122,4 +172,4 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     // console.log(newArray);
     // console.log(tracksArray);
   })
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));

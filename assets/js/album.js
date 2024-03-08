@@ -10,12 +10,13 @@ containerFluidSong.className = "text-decoration-none text-white";
 const footerImg = document.getElementById("footer-img");
 const footerTitle = document.getElementById("footer-title");
 const footerArtistName = document.getElementById("footer-artist-name");
-const footerPlayBtn = document.getElementById("footer-play");
 const footerPlayer = document.getElementById("footer-player");
-//const audio = document.getElementById("audio");
+const footerPlayBtn = document.getElementById("footer-play");
+footerPlayBtn.style = "cursor: pointer;";
+const playBtn = document.getElementById("play-btn-green");
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
-  .then((response) => {
+  .then(response => {
     console.log(response);
 
     if (response.ok) {
@@ -36,7 +37,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then((album) => {
+  .then(album => {
     console.log(album);
 
     imgAlbum.src = album.cover_medium;
@@ -45,13 +46,14 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
     artistName.innerText = album.artist.name;
     duration.innerText = album.duration + " s";
 
-    artistName.addEventListener("click", (e) => {
+    artistName.addEventListener("click", e => {
       window.location.assign(`/artist-page.html?artistId=${album.artist.id}`);
     });
 
     //generazione Tracks
     const tracksArray = album.tracks.data;
 
+    //generazione elemento audio
     const audio = new Audio();
 
     for (let i = 0; i < tracksArray.length; i++) {
@@ -105,27 +107,49 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       divContainer.appendChild(rowFirst);
       containerFluidSong.appendChild(divContainer);
 
-      //audio.id = i + 1;
+      let isPlaying = false;
+      let currentTrack = null;
 
-      divContainer.addEventListener("click", (e) => {
+      divContainer.addEventListener("click", e => {
         footerPlayer.classList.remove("d-none");
-        if (audio.paused) {
+
+        if (!isPlaying || currentTrack !== tracksArray[i]) {
           audio.src = tracksArray[i].preview;
           audio.play();
+          isPlaying = true;
+          currentTrack = tracksArray[i];
         } else {
           audio.pause();
+          isPlaying = false;
         }
+
         footerImg.src = tracksArray[i].album.cover;
         footerTitle.innerText = tracksArray[i].title;
         footerArtistName.innerText = tracksArray[i].artist.name;
       });
-      // footerPlayBtn.addEventListener("click", e => {
-      //   if (audio.paused) {
-      //     audio.play();
-      //   } else {
-      //     audio.pause();
-      //   }
-      // });
+
+      const randomSong = Math.ceil(Math.random() * tracksArray.length);
+
+      playBtn.addEventListener("click", e => {
+        footerPlayer.classList.remove("d-none");
+        if (audio.paused) {
+          audio.src = tracksArray[randomSong].preview;
+          audio.play();
+        } else {
+          audio.pause();
+        }
+        footerImg.src = tracksArray[randomSong].album.cover;
+        footerTitle.innerText = tracksArray[randomSong].title;
+        footerArtistName.innerText = tracksArray[randomSong].artist.name;
+      });
+
+      footerPlayBtn.addEventListener("click", e => {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
     }
   })
-  .catch((err) => console.log(err));
+  .catch(err => console.log(err));
