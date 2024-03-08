@@ -251,3 +251,11 @@ body {
 .height-sidebar {
   /*height: calc(100vh - 76px);*/
 }
+
+@media screen and (max-width: 768px) {
+  .w-19 {
+    width: 45%;
+    margin-inline: auto;
+    margin-block-end: 1rem;
+  }
+}
