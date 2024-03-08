@@ -45,7 +45,7 @@
 }
 
 .style-title {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -173,3 +173,7 @@
 /* .height-sidebar {
   height: calc(100vh - 76px);
 } */
+
+.sfumatura {
+  background-image: linear-gradient(360deg, #131311e3, #665b2b00);
+}
