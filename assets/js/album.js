@@ -14,6 +14,7 @@ const footerPlayer = document.getElementById("footer-player");
 const footerPlayBtn = document.getElementById("footer-play");
 footerPlayBtn.style = "cursor: pointer;";
 const playBtn = document.getElementById("play-btn-green");
+const footerPauseBtn = document.getElementById("footer-pause");
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
   .then(response => {
@@ -118,9 +119,13 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
           audio.play();
           isPlaying = true;
           currentTrack = tracksArray[i];
+          footerPlayBtn.classList.add("d-none");
+          footerPauseBtn.classList.remove("d-none");
         } else {
           audio.pause();
           isPlaying = false;
+          footerPlayBtn.classList.remove("d-none");
+          footerPauseBtn.classList.add("d-none");
         }
 
         footerImg.src = tracksArray[i].album.cover;
@@ -128,26 +133,50 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
         footerArtistName.innerText = tracksArray[i].artist.name;
       });
 
-      const randomSong = Math.ceil(Math.random() * tracksArray.length);
+      // const randomSong = Math.ceil(Math.random() * tracksArray.length);
 
       playBtn.addEventListener("click", e => {
         footerPlayer.classList.remove("d-none");
         if (audio.paused) {
-          audio.src = tracksArray[randomSong].preview;
+          audio.src = tracksArray[0].preview;
           audio.play();
+          footerPlayBtn.classList.add("d-none");
+          footerPauseBtn.classList.remove("d-none");
         } else {
           audio.pause();
+          footerPlayBtn.classList.remove("d-none");
+          footerPauseBtn.classList.add("d-none");
         }
-        footerImg.src = tracksArray[randomSong].album.cover;
-        footerTitle.innerText = tracksArray[randomSong].title;
-        footerArtistName.innerText = tracksArray[randomSong].artist.name;
+        footerImg.src = tracksArray[0].album.cover;
+        footerTitle.innerText = tracksArray[0].title;
+        footerArtistName.innerText = tracksArray[0].artist.name;
       });
 
       footerPlayBtn.addEventListener("click", e => {
+        footerPlayer.classList.remove("d-none");
         if (audio.paused) {
           audio.play();
+          footerPlayBtn.classList.add("d-none");
+          footerPauseBtn.classList.remove("d-none");
         } else {
           audio.pause();
+          footerPlayBtn.classList.remove("d-none");
+          footerPauseBtn.classList.add("d-none");
+        }
+        footerImg.src = albumsArray[randomAlbumsIndex].album.cover;
+        footerTitle.innerText = albumsArray[randomAlbumsIndex].title;
+        footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
+      });
+
+      footerPauseBtn.addEventListener("click", e => {
+        footerPlayBtn.classList.remove("d-none");
+        footerPauseBtn.classList.add("d-none");
+        if (audio.played) {
+          audio.pause();
+          footerPlayBtn.classList.remove("d-none");
+          footerPauseBtn.classList.add("d-none");
+        } else {
+          audio.play();
         }
       });
     }

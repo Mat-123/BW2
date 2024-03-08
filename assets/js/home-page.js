@@ -18,6 +18,7 @@ const footerImg = document.getElementById("footer-img");
 const footerTitle = document.getElementById("footer-title");
 const footerArtistName = document.getElementById("footer-artist-name");
 const footerPlayBtn = document.getElementById("footer-play");
+const footerPauseBtn = document.getElementById("footer-pause");
 const footerPlayer = document.getElementById("footer-player");
 
 console.log(cardsAlbum);
@@ -84,20 +85,53 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       footerPlayer.classList.remove("d-none");
       if (audio.paused) {
         audio.play();
+        footerPlayBtn.classList.add("d-none");
+        footerPauseBtn.classList.remove("d-none");
       } else {
         audio.pause();
+        footerPlayBtn.classList.remove("d-none");
+        footerPauseBtn.classList.add("d-none");
       }
       footerImg.src = albumsArray[randomAlbumsIndex].album.cover;
       footerTitle.innerText = albumsArray[randomAlbumsIndex].title;
       footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
     });
+
     footerPlayBtn.addEventListener("click", e => {
+      footerPlayer.classList.remove("d-none");
       if (audio.paused) {
         audio.play();
+        footerPlayBtn.classList.add("d-none");
+        footerPauseBtn.classList.remove("d-none");
       } else {
         audio.pause();
+        footerPlayBtn.classList.remove("d-none");
+        footerPauseBtn.classList.add("d-none");
+      }
+      footerImg.src = albumsArray[randomAlbumsIndex].album.cover;
+      footerTitle.innerText = albumsArray[randomAlbumsIndex].title;
+      footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
+    });
+
+    footerPauseBtn.addEventListener("click", e => {
+      footerPlayBtn.classList.remove("d-none");
+      footerPauseBtn.classList.add("d-none");
+      if (audio.played) {
+        audio.pause();
+        footerPlayBtn.classList.remove("d-none");
+        footerPauseBtn.classList.add("d-none");
+      } else {
+        audio.play();
       }
     });
+
+    // footerPlayBtn.addEventListener("click", e => {
+    //   if (audio.paused) {
+    //     audio.play();
+    //   } else {
+    //     audio.pause();
+    //   }
+    // });
   })
   .catch(err => console.log(err));
 
