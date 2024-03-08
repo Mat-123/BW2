@@ -14,7 +14,7 @@ const footerPlayBtn = document.getElementById("footer-play");
 const footerPlayer = document.getElementById("footer-player");
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
-  .then(response => {
+  .then((response) => {
     console.log(response);
 
     if (response.ok) {
@@ -35,7 +35,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then(album => {
+  .then((album) => {
     console.log(album);
 
     imgAlbum.src = album.cover_medium;
@@ -44,7 +44,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
     artistName.innerText = album.artist.name;
     duration.innerText = album.duration + " s";
 
-    artistName.addEventListener("click", e => {
+    artistName.addEventListener("click", (e) => {
       window.location.assign(`/artist-page.html?artistId=${album.artist.id}`);
     });
 
@@ -104,7 +104,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       const audio = new Audio(tracksArray[i].preview);
       audio.id = i + 1;
 
-      divContainer.addEventListener("click", e => {
+      divContainer.addEventListener("click", (e) => {
         footerPlayer.classList.remove("d-none");
         if (audio.paused) {
           audio.play();
@@ -124,4 +124,4 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       // });
     }
   })
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));

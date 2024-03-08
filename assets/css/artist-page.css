@@ -68,9 +68,9 @@
   margin-block-start: 20px;
 }
 
-.h-second-section-central {
+/* .h-second-section-central {
   height: calc(60vh - 76px);
-}
+} */
 
 /* css sidebar */
 .mainContainer {
@@ -170,6 +170,6 @@
   transition: opacity 0.2s;
 }
 
-.height-sidebar {
+/* .height-sidebar {
   height: calc(100vh - 76px);
-}
+} */

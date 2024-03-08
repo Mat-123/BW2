@@ -39,7 +39,7 @@
               </div>
               <div class="mx-3 mb-5 d-block">
                 <div class="mb-3">
-                  <a href="./index.html" class="a-side d-flex align-items-center">
+                  <a href="./Home-Page.html" class="a-side d-flex align-items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -223,9 +223,9 @@
                 </div>
                 <!--FINE NAVBAR-->
                 <div class="d-flex flex-column">
-                  <div class="d-flex ms-3 pt-5 align-items-baseline">
+                  <div class="d-flex ms-3 pt-2 align-items-baseline">
                     <i class="bi bi-patch-check-fill text-primary me-2"></i>
-                    <p class="text-white fs-7">Artista Verificato</p>
+                    <p class="text-white m-2 fs-7">Artista Verificato</p>
                   </div>
                   <h1 class="text-white ms-3 style-title" id="artist-name-title"></h1>
                   <h3 class="text-white ms-3 fs-7" id="fans"></h3>
@@ -237,11 +237,56 @@
                   <button class="btn btn-outline-secondary border-white text-white me-3 fs-7 py-1">FOLLOWING</button>
                   <i class="bi bi-three-dots text-white"></i>
                 </div>
-                <div class="d-flex ms-3">
-                  <div class="d-flex flex-column" id="div-container">
-                    <h3 class="text-white fs-6 mb-3">Popolari</h3>
+                <!--INIZIO SECONDA SEZ.-->
 
-                    <!-- <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-8">
+                      <h3 class="text-white fs-6 mb-3">Popolari</h3>
+
+                      <div id="div-container"></div>
+                      <h5 class="text-white fs-7 mt-2">VISUALIZZA ALTRO</h5>
+                    </div>
+                    <div class="col-4">
+                      <h3 class="text-white fs-6 mb-4">Brani che ti piacciono</h3>
+                      <div class="d-flex align-items-center">
+                        <div class="row">
+                          <div class="col-3 px-0 mx-0">
+                            <div class="position-relative me-2">
+                              <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+                              <!--Cuore like-->
+                              <!-- <i
+                                class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-1 rounded-circle bg-success text-white w-25"
+                              ></i> -->
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class="d-flex flex-column">
+                              <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
+                              <p class="text-secondary fs-8" id="artist-name-last"></p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="w-25 position-relative me-2">
+                          <img src="./assets/imgs/search/image-24.jpg" alt="img" class="w-100 rounded-circle" />
+                          <i
+                            class="bi bi-suit-heart-fill position-absolute bottom-0 end-0 me-1 rounded-circle bg-success text-white w-25"
+                          ></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <h5 class="text-white fs-7">Hai messo Mi piace a 11 brani</h5>
+                          <p class="text-secondary fs-8" id="artist-name-last"></p>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--
+                <div class="d-flex ms-3">
+                  <div class="d-flex flex-column">
+                    <h3 class="text-white fs-6 mb-3">Popolari</h3>
+                    <div id="div-container"></div> -->
+                <!-- <div class="d-flex align-items-center justify-content-between ms-2 mb-2">
                       <div class="d-flex align-items-center">
                         <span class="text-secondary me-2 fs-7">1</span>
                         <img src="./assets/imgs/search/image-6.jpg" alt="img" class="w-10 me-2" />
@@ -287,7 +332,7 @@
                       <p class="text-secondary mb-1 me-3 fs-7">43.816.679</p>
                       <p class="text-secondary mb-1 fs-7">3:22</p>
                     </div> -->
-                    <h5 class="text-white fs-7 mt-2">VISUALIZZA ALTRO</h5>
+                <!-- <h5 class="text-white fs-7 mt-2">VISUALIZZA ALTRO</h5>
                   </div>
                   <div class="d-flex flex-column ms-4">
                     <h3 class="text-white fs-6 mb-4">Brani che ti piacciono</h3>
@@ -304,11 +349,12 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
+
         <!--senzione colonna DX-->
         <div class="col-2 bg-black text-grey">
           <div class="my-4 d-flex justify-content-between">
@@ -397,13 +443,14 @@
 
     <!--footer player-->
     <div
-      class="d-flex w-100 bg-bottom-player justify-content-between align-items-center sticky-bottom z-index-2 text-grey"
+      class="d-flex w-100 bg-bottom-player justify-content-between align-items-center sticky-bottom z-index-2 text-grey d-none"
+      id="footer-player"
     >
       <div class="d-flex align-items-center my-2 mx-3">
-        <img src="./assets/imgs/main/image-13.jpg" alt="" max-width="60px" height="60px" class="me-3" />
+        <img src="./assets/imgs/main/image-13.jpg" alt="" max-width="60px" height="60px" class="me-3" id="footer-img" />
         <div class="flex-column me-4">
-          <p class="fw-500 m-0 d-block">Charlie Hookman</p>
-          <span class="fs-08 m-0 d-block">Album</span>
+          <p class="fw-500 m-0 d-block" id="footer-title">Charlie Hookman</p>
+          <span class="fs-08 m-0 d-block" id="footer-artist-name">Album</span>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -457,6 +504,8 @@
             fill="currentColor"
             class="bi bi-play-circle-fill me-3"
             viewBox="0 0 16 16"
+            style="cursor: pointer"
+            id="footer-play"
           >
             <path
               d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
