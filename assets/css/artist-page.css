@@ -29,7 +29,7 @@
 }
 
 .vh-60 {
-  height: 60vh;
+  min-height: 60vh;
 }
 
 .vh-70 {
