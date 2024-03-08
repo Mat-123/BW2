@@ -12,6 +12,7 @@ const footerTitle = document.getElementById("footer-title");
 const footerArtistName = document.getElementById("footer-artist-name");
 const footerPlayBtn = document.getElementById("footer-play");
 const footerPlayer = document.getElementById("footer-player");
+//const audio = document.getElementById("audio");
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
   .then((response) => {
@@ -50,6 +51,9 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
 
     //generazione Tracks
     const tracksArray = album.tracks.data;
+
+    const audio = new Audio();
+
     for (let i = 0; i < tracksArray.length; i++) {
       const divContainer = document.createElement("div");
       divContainer.className = "container mt-4";
@@ -101,12 +105,12 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
       divContainer.appendChild(rowFirst);
       containerFluidSong.appendChild(divContainer);
 
-      const audio = new Audio(tracksArray[i].preview);
-      audio.id = i + 1;
+      //audio.id = i + 1;
 
       divContainer.addEventListener("click", (e) => {
         footerPlayer.classList.remove("d-none");
         if (audio.paused) {
+          audio.src = tracksArray[i].preview;
           audio.play();
         } else {
           audio.pause();

@@ -6,8 +6,14 @@ const divBgImg = document.getElementById("bg-img");
 const artistNameLast = document.getElementById("artist-name-last");
 const divContainer = document.getElementById("div-container");
 
+const footerImg = document.getElementById("footer-img");
+const footerTitle = document.getElementById("footer-title");
+const footerArtistName = document.getElementById("footer-artist-name");
+const footerPlayBtn = document.getElementById("footer-play");
+const footerPlayer = document.getElementById("footer-player");
+
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
-  .then(response => {
+  .then((response) => {
     console.log(response);
 
     if (response.ok) {
@@ -28,7 +34,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then(artist => {
+  .then((artist) => {
     console.log(artist);
 
     titleArtistName.innerText = artist.name;
@@ -36,10 +42,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
     divBgImg.style = `background-image: url(${artist.picture_big}); background-repeat: no-repeat; background-size: cover;`;
     artistNameLast.innerText = "Di " + artist.name;
   })
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=5`)
-  .then(response => {
+  .then((response) => {
     console.log(response);
 
     if (response.ok) {
@@ -60,7 +66,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then(tracks => {
+  .then((tracks) => {
     const tracksArray = tracks.data;
     console.log(tracksArray);
 
@@ -116,4 +122,4 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     // console.log(newArray);
     // console.log(tracksArray);
   })
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
