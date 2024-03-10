@@ -20,11 +20,14 @@ const footerArtistName = document.getElementById("footer-artist-name");
 const footerPlayBtn = document.getElementById("footer-play");
 const footerPauseBtn = document.getElementById("footer-pause");
 const footerPlayer = document.getElementById("footer-player");
+const likeBtn = document.getElementById("like-btn");
+const unlikeBtn = document.getElementById("unlike-btn");
+const volumeControl = document.getElementById("volumeControl");
 
 console.log(cardsAlbum);
 
 fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
-  .then(response => {
+  .then((response) => {
     console.log(response);
 
     if (response.ok) {
@@ -45,7 +48,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       throw new Error("Errore nel reperimento dati");
     }
   })
-  .then(albums => {
+  .then((albums) => {
     //oggetto ritornato dalla response della fetch
     console.log(albums);
 
@@ -75,13 +78,13 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     p5.innerText = albumsArray[4].album.title.substring(0, 25);
 
     for (let i = 0; i < cardsAlbum.length; i++) {
-      cardsAlbum[i].addEventListener("click", e => {
+      cardsAlbum[i].addEventListener("click", (e) => {
         window.location.assign(`/album.html?albumId=${albumsArray[i].album.id}`);
       });
     }
 
     const audio = new Audio(albumsArray[randomAlbumsIndex].preview);
-    playBtn.addEventListener("click", e => {
+    playBtn.addEventListener("click", (e) => {
       footerPlayer.classList.remove("d-none");
       if (audio.paused) {
         audio.play();
@@ -97,7 +100,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
     });
 
-    footerPlayBtn.addEventListener("click", e => {
+    footerPlayBtn.addEventListener("click", (e) => {
       footerPlayer.classList.remove("d-none");
       if (audio.paused) {
         audio.play();
@@ -113,7 +116,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       footerArtistName.innerText = albumsArray[randomAlbumsIndex].artist.name;
     });
 
-    footerPauseBtn.addEventListener("click", e => {
+    footerPauseBtn.addEventListener("click", (e) => {
       footerPlayBtn.classList.remove("d-none");
       footerPauseBtn.classList.add("d-none");
       if (audio.played) {
@@ -133,13 +136,13 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
     //   }
     // });
   })
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 const randomArtistId = Math.ceil(Math.random() * 95);
 
-const generateCardArtist = artistIndex => {
+const generateCardArtist = (artistIndex) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistIndex}`)
-    .then(response => {
+    .then((response) => {
       console.log(response);
 
       if (response.ok) {
@@ -160,7 +163,7 @@ const generateCardArtist = artistIndex => {
         throw new Error("Errore nel reperimento dati");
       }
     })
-    .then(artist => {
+    .then((artist) => {
       console.log(artist);
 
       const card = document.createElement("div");
@@ -188,12 +191,30 @@ const generateCardArtist = artistIndex => {
       card.appendChild(cardBody);
       cardsContainer.appendChild(card);
 
-      card.addEventListener("click", e => {
+      card.addEventListener("click", (e) => {
         window.location.assign(`/artist-page.html?artistId=${artist.id}`);
       });
     })
-    .catch(err => console.log(err));
+    .catch((err) => console.log(err));
 };
+
+likeBtn.addEventListener("click", (e) => {
+  if (likeBtn.style.display !== "none") {
+    likeBtn.style.display = "none";
+    unlikeBtn.style.display = "block";
+  }
+});
+
+unlikeBtn.addEventListener("click", (e) => {
+  if (unlikeBtn.stile !== "none") {
+    unlikeBtn.style.display = "none";
+    likeBtn.style.display = "block";
+  }
+});
+
+volumeControl.addEventListener("input", () => {
+  audio.volume = volumeControl.value;
+});
 
 generateCardArtist(randomArtistId);
 generateCardArtist(randomArtistId + 1);
