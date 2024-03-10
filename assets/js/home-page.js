@@ -23,6 +23,10 @@ const footerPlayer = document.getElementById("footer-player");
 const likeBtn = document.getElementById("like-btn");
 const unlikeBtn = document.getElementById("unlike-btn");
 const volumeControl = document.getElementById("volumeControl");
+const playingTime = document.getElementById("playingTime");
+const songDuration = document.getElementById("songDuration");
+const volumeUp = document.getElementById("volumeUp");
+const mutedVolume = document.getElementById("mutedVolume");
 
 console.log(cardsAlbum);
 
@@ -132,6 +136,33 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       audio.volume = volumeControl.value;
     });
 
+    audio.addEventListener("timeupdate", () => {
+      const currentTime = audio.currentTime;
+      const duration = audio.duration;
+
+      const currentMinutes = Math.floor(currentTime / 60);
+      const currentSeconds = Math.floor(currentTime % 60);
+      const totalMinutes = Math.floor(duration / 60);
+      const totalSeconds = Math.floor(duration % 60);
+
+      playingTime.textContent = `${currentMinutes}:${currentSeconds < 10 ? "0" : ""}${currentSeconds}`;
+      songDuration.textContent = `${totalMinutes}:${totalSeconds < 10 ? "0" : ""}${totalSeconds}`;
+    });
+
+    volumeUp.addEventListener("click", (e) => {
+      volumeUp.classList.remove("d-md-block");
+      mutedVolume.classList.add("d-md-block");
+      audio.muted = true;
+      muteState = "mute";
+    });
+
+    mutedVolume.addEventListener("click", (e) => {
+      mutedVolume.classList.remove("d-md-block");
+      volumeUp.classList.add("d-md-block");
+      audio.muted = false;
+      muteState = "unmute";
+    });
+
     // footerPlayBtn.addEventListener("click", e => {
     //   if (audio.paused) {
     //     audio.play();
@@ -210,7 +241,7 @@ likeBtn.addEventListener("click", (e) => {
 });
 
 unlikeBtn.addEventListener("click", (e) => {
-  if (unlikeBtn.stile !== "none") {
+  if (unlikeBtn.style !== "none") {
     unlikeBtn.style.display = "none";
     likeBtn.style.display = "block";
   }
