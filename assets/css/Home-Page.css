@@ -258,4 +258,19 @@ body {
     margin-inline: auto;
     margin-block-end: 1rem;
   }
+  .sliderMain {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sliderMain {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .sliderMain {
+    width: 300px;
+  }
 }
