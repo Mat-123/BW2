@@ -128,6 +128,10 @@ fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?
       }
     });
 
+    volumeControl.addEventListener("input", () => {
+      audio.volume = volumeControl.value;
+    });
+
     // footerPlayBtn.addEventListener("click", e => {
     //   if (audio.paused) {
     //     audio.play();
@@ -210,10 +214,6 @@ unlikeBtn.addEventListener("click", (e) => {
     unlikeBtn.style.display = "none";
     likeBtn.style.display = "block";
   }
-});
-
-volumeControl.addEventListener("input", () => {
-  audio.volume = volumeControl.value;
 });
 
 generateCardArtist(randomArtistId);
